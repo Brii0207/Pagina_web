@@ -2,20 +2,34 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <!-- STYLE DE LA PAGINA -->
 <style>
 
+html{
+    scroll-behavior: smooth;
+}
+
 /*COLOR FONDO*/body {
     margin: 0;
     padding: 0;
+    font-family: "Montserrat", sans-serif;
     background-color:rgba(240,249,248,255);
 }
 .justificado{
     text-align: justify;
 }
+
+.p{
+    text-align: center;
+}
+
+
 .subtitulos{
     display: flex;
     justify-content: center;
@@ -36,6 +50,12 @@
     background-color: #c6e6e3;
     flex-wrap: wrap;
     font-family:'Times New Roman';
+    position: fixed; /*Barra de navegacion fija*/
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que la navegación esté por encima de otros elementos */
+    padding: 10px 0;
+    box-shadow: 0 4px 2px -2px gray;
 }
 nav a { /*Color y tipo de letra de la barra de navegacion*/
     color:  rgba(63,75,127,255);
@@ -51,6 +71,7 @@ nav a:hover {
 }
 .container {
     padding: 1rem;
+    padding-top: 80px; /* Añade espacio superior para evitar que el contenido quede debajo de la barra de navegación fija */
 }
 .product {/*Color de fondo del cuadro de la imagen producto*/
     background-color: white;
@@ -93,6 +114,8 @@ nav a:hover {
 <!--CODIGO DEL BODY-->
 <body>
     <!--Titulo-->
+    <br>
+    <br>
     <header>
         <h1>FashionStyle</h1>
     </header>
@@ -105,32 +128,36 @@ nav a:hover {
     </nav>
     <!--Mensaje de bienvenida -->
     <div class="container" id="home">
-    <center><h2 class="subtitulos">Bienvenidos a FashionStyle</h2></center>
+        <center><h2 class="subtitulos">Bienvenidos a FashionStyle</h2></center>
         <div class="justificado">
-    <p>Nos complace tenerte aquí y ser parte de tu viaje de estilo. En nuestra tienda, encontrarás una amplia selección de ropa y accesorios diseñados para resaltar tu personalidad y brindarte la máxima comodidad. Nuestro equipo está aquí para asesorarte y ayudarte a encontrar esas piezas únicas que se adaptan perfectamente a ti.<br><br>
+            <p style="text-align: center;">Nos complace tenerte aquí y ser parte de tu viaje de estilo. En nuestra tienda, encontrarás una amplia selección de ropa y accesorios diseñados para resaltar tu personalidad y brindarte la máxima comodidad. Nuestro equipo está aquí para asesorarte y ayudarte a encontrar esas piezas únicas que se adaptan perfectamente a ti.<br><br>
             Explora nuestras colecciones cuidadosamente seleccionadas, donde cada prenda cuenta una historia de moda y elegancia. Ya sea que estés buscando un atuendo casual, profesional o de gala, tenemos algo especial para cada ocasión.</p>
         </div>
-        </div>
-    <!--Listado de los prouductos a mostrar-->
+    </div>
+    <!--Listado de los productos a mostrar-->
     <div class="container" id="products">
         <!--titulo--><center> <h2 class="subtitulos">Nuestros Productos</h2></center>
-        <!--Primer producto--><div class="product-container">
+        <!--Primer producto-->
+        <div class="product-container">
             <div class="product">
                 <img src="https://i.pinimg.com/564x/62/fe/2e/62fe2e533b63f9d52b93d786e8c7f908.jpg" alt="Camiseta">
                 <h2>Ropa niñ@</h2>
                 <p>Precio: $20.00</p>
             </div>
-        <!--Segundo producto--><div class="product">
+            <!--Segundo producto-->
+            <div class="product">
                 <img src="https://i.pinimg.com/564x/fd/84/81/fd848165c75ba730fe43d2b26da9c91d.jpg" alt="Jeans">
                 <h2>Ropa caballero</h2>
                 <p>Precio: $100.00</p>
             </div>
-        <!--Tercer producto-->    <div class="product">
+            <!--Tercer producto-->
+            <div class="product">
                 <img src="https://i.pinimg.com/564x/91/92/56/919256a084243a038a4cd79e8558311b.jpg" alt="Jeans">
                 <h2>Ropa dama</h2>
                 <p>Precio: $150.00</p>
             </div>
-        <!--Cuarto producto-->    <div class="product">
+            <!--Cuarto producto-->
+            <div class="product">
                 <img src="https://i.pinimg.com/564x/b4/e2/6a/b4e26a5f742e18ba43a26ac5fba067d0.jpg" alt="Jeans">
                 <h2>Ropa bebé</h2>
                 <p>Precio: $50.00</p>
@@ -140,13 +167,15 @@ nav a:hover {
     <!--INFORMACION SOBRE LA EMPRESA-->
     <div class="container" id="about">
         <center><h2 class="subtitulos">Sobre Nosotros</h2></center>
-        <p>En FashionStyle, nuestra misión es ofrecer moda de alta calidad que inspire y empodere a cada uno de nuestros clientes. Desde nuestros humildes comienzos, hemos crecido y evolucionado, siempre manteniendo un firme compromiso con la excelencia y la satisfacción del cliente.</p>
+        <p style="text-align: center;">En FashionStyle, nuestra misión es ofrecer moda de alta calidad que inspire y empodere a cada uno de nuestros clientes. Desde nuestros humildes comienzos, hemos crecido y evolucionado, siempre manteniendo un firme compromiso con la excelencia y la satisfacción del cliente.</p>
     </div>
     <!--CONTACTO DE LA EMPRESA-->
     <div class="container" id="contact">
-    <center><h2 class="subtitulos">Contacto</h2>
-        <p>Correo Electrónico: info@fashionstyle.com</p>
-        <p>Teléfono: 44 73 21 34 09</p></center>
+        <center><h2 class="subtitulos">Contacto</h2></center>
+        <center>
+            <p>Correo Electrónico: info@fashionstyle.com</p>
+            <p>Teléfono: 44 73 21 34 09</p>
+        </center>
     </div>
     <!--PIE DE PAGINA-->
     <footer>
