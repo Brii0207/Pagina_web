@@ -1,22 +1,109 @@
+<!--INICIO DEL HTML-->
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="style.css">
-   
 </head>
+<!-- STYLE DE LA PAGINA -->
+<style>
+
+/*COLOR FONDO*/body {
+    margin: 0;
+    padding: 0;
+    background-color:rgba(240,249,248,255);
+}
+.justificado{
+    text-align: justify;
+}
+.subtitulos{
+    display: flex;
+    justify-content: center;
+    background-color:  rgba(63,75,127,255);/*Color de los mensajes o titulos de bienvenida,etc.*/
+    flex-wrap: wrap;
+    color:aliceblue; /*color de letra de los mensajes*/
+}
+/*ENCABEZADO*/header {
+    background-color: rgba(63,75,127,255); /*Color de fondo*/
+    color: rgb(248, 247, 247); /*Color de letra*/
+    padding: 1rem 0;
+    text-align: center;
+    font-family: Georgia;
+}
+/*BARRA NAVEGACION*/nav {
+    display: flex;
+    justify-content: center;
+    background-color: #c6e6e3;
+    flex-wrap: wrap;
+    font-family:'Times New Roman';
+}
+nav a { /*Color y tipo de letra de la barra de navegacion*/
+    color:  rgba(63,75,127,255);
+    font-weight: bold;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    flex: 1 1 auto;
+    text-align: center;
+}
+nav a:hover {
+    background-color:#82bfb7;/*color de barra de navegacion cuando el usuario interactua*/
+}
+.container {
+    padding: 1rem;
+}
+.product {/*Color de fondo del cuadro de la imagen producto*/
+    background-color: white;
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+.product h2 {
+    color: #333;
+}
+/*PIE DE PAGINA*/footer {
+    background-color: #9dacc9; /*Color de pie de pagina*/
+    color: rgba(63,75,127,255);/*Color de letra*/
+    text-align: center;
+    padding: 1rem 0;
+}
+@media (min-width: 600px) {
+    .product-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .product {
+        flex: 1 1 45%;
+        margin: 1rem;
+    }
+}
+@media (min-width: 900px) {
+    .product {
+        flex: 1 1 30%;
+        margin: 1rem;
+    }
+}
+</style>
+<!--CODIGO DEL BODY-->
 <body>
+    <!--Titulo-->
     <header>
         <h1>FashionStyle</h1>
     </header>
+    <!--Barra navegacion-->
     <nav>
         <a href="#home">Inicio</a>
         <a href="#products">Productos</a>
         <a href="#about">Sobre Nosotros</a>
         <a href="#contact">Contacto</a>
     </nav>
+    <!--Mensaje de bienvenida -->
     <div class="container" id="home">
     <center><h2 class="subtitulos">Bienvenidos a FashionStyle</h2></center>
         <div class="justificado">
@@ -24,42 +111,46 @@
             Explora nuestras colecciones cuidadosamente seleccionadas, donde cada prenda cuenta una historia de moda y elegancia. Ya sea que estés buscando un atuendo casual, profesional o de gala, tenemos algo especial para cada ocasión.</p>
         </div>
         </div>
+    <!--Listado de los prouductos a mostrar-->
     <div class="container" id="products">
-        <center> <h2 class="subtitulos">Nuestros Productos</h2></center>
-        <div class="product-container">
+        <!--titulo--><center> <h2 class="subtitulos">Nuestros Productos</h2></center>
+        <!--Primer producto--><div class="product-container">
             <div class="product">
-                <img src="https://childrens-spaces.com/wp-content/uploads/2019/02/moda-infantil-810x401.jpg" alt="Camiseta">
+                <img src="https://i.pinimg.com/564x/62/fe/2e/62fe2e533b63f9d52b93d786e8c7f908.jpg" alt="Camiseta">
                 <h2>Ropa niñ@</h2>
                 <p>Precio: $20.00</p>
             </div>
-            <div class="product">
-                <img src="https://i0.wp.com/hotbook.com.mx/wp-content/uploads/2017/04/silver-deer.jpg?resize=800%2C529" alt="Jeans">
+        <!--Segundo producto--><div class="product">
+                <img src="https://i.pinimg.com/564x/fd/84/81/fd848165c75ba730fe43d2b26da9c91d.jpg" alt="Jeans">
                 <h2>Ropa caballero</h2>
                 <p>Precio: $100.00</p>
             </div>
-            <div class="product">
-                <img src="https://www.lifeboxset.com/wp-content/uploads/2015/07/forever-21-stylizacja-2.jpg" alt="Jeans">
+        <!--Tercer producto-->    <div class="product">
+                <img src="https://i.pinimg.com/564x/91/92/56/919256a084243a038a4cd79e8558311b.jpg" alt="Jeans">
                 <h2>Ropa dama</h2>
                 <p>Precio: $150.00</p>
             </div>
-            <div class="product">
-                <img src="https://st2.depositphotos.com/2939989/9208/i/950/depositphotos_92084628-stock-photo-child-boy-clothes-set-isolated.jpg" alt="Jeans">
+        <!--Cuarto producto-->    <div class="product">
+                <img src="https://i.pinimg.com/564x/b4/e2/6a/b4e26a5f742e18ba43a26ac5fba067d0.jpg" alt="Jeans">
                 <h2>Ropa bebé</h2>
                 <p>Precio: $50.00</p>
             </div>
         </div>
     </div>
+    <!--INFORMACION SOBRE LA EMPRESA-->
     <div class="container" id="about">
         <center><h2 class="subtitulos">Sobre Nosotros</h2></center>
         <p>En FashionStyle, nuestra misión es ofrecer moda de alta calidad que inspire y empodere a cada uno de nuestros clientes. Desde nuestros humildes comienzos, hemos crecido y evolucionado, siempre manteniendo un firme compromiso con la excelencia y la satisfacción del cliente.</p>
     </div>
+    <!--CONTACTO DE LA EMPRESA-->
     <div class="container" id="contact">
     <center><h2 class="subtitulos">Contacto</h2>
         <p>Correo Electrónico: info@fashionstyle.com</p>
         <p>Teléfono: 44 73 21 34 09</p></center>
     </div>
+    <!--PIE DE PAGINA-->
     <footer>
         <p>&copy; 2024 FashionStyle. Todos los derechos reservados.</p>
     </footer>
-</body>
-</html>
+</body><!--FIN DEL BODY-->
+</html><!--FIN DEL CODIGO-->
